@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <div class="stickers">
+        <img src="flor1 (1).jpg">
+        <img src="flor2.jpg">
+        <img src="flor3.jpg">
+    </div>
+    <div>
+        <input type="number" id="primerSelector">
+        <input type="number" id="segundoSelector">
+        <input type="number" id="tercerSelector">
+    </div>
+    <p></p>
+    <button>Verificar</button>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            width: 11em;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .stickers {
+            margin-top: 10em;
+        }
+
+        button {
+            margin: 1em;
+            background-color: plum;
+        }
+    </style>
+    <script>
+        btn = document.querySelector("button")
+        p = document.querySelector("p")
+
+        btn.addEventListener("click", () => {
+            const primerSelector = document.querySelector("#primerSelector").value
+            const segundoSelector = document.querySelector("#segundoSelector").value
+            const tercerSelector = document.querySelector("#tercerSelector").value
+            const total = (+ primerSelector + +segundoSelector + +tercerSelector)
+
+            if (total < 0) {
+                p.innerHTML = "No llevas stickers"
+            }
+            else if (total >= 0 && total < 10){
+                p.innerHTML = "Te faltan stickers"
+            }
+            else if (total == 10){
+                p.innerHTML = "Llevas 10 stickers"
+            }
+            else if (total > 10){
+                p.innerHTML = "Llevas demasiados stickers"
+            };
+        })
+    </script>
+</body>
+
+</html>

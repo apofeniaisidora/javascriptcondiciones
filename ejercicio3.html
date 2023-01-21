@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <DIV>
+        <h1>Ingresa el password</h1>
+        <select id="primerNumero">
+            <option value="1" type="number">1</option>
+            <option value="2" type="number">2</option>
+            <option value="3" type="number">3</option>
+            <option value="4" type="number">4</option>
+            <option value="5" type="number">5</option>
+            <option value="6" type="number">6</option>
+            <option value="7" type="number">7</option>
+            <option value="8" type="number">8</option>
+            <option value="9" type="number">9</option>
+        </select>
+        <select id="segundoNumero">
+            <option value="1" type="number">1</option>
+            <option value="2" type="number">2</option>
+            <option value="3" type="number">3</option>
+            <option value="4" type="number">4</option>
+            <option value="5" type="number">5</option>
+            <option value="6" type="number">6</option>
+            <option value="7" type="number">7</option>
+            <option value="8" type="number">8</option>
+            <option value="9" type="number">9</option>
+        </select>
+        <select id="tercerNumero">
+            <option value="1" type="number">1</option>
+            <option value="2" type="number">2</option>
+            <option value="3" type="number">3</option>
+            <option value="4" type="number">4</option>
+            <option value="5" type="number">5</option>
+            <option value="6" type="number">6</option>
+            <option value="7" type="number">7</option>
+            <option value="8" type="number">8</option>
+            <option value="9" type="number">9</option>
+        </select>
+        <br>
+        <button>Ingresar</button>
+    </DIV>
+    <p></p>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; background-color: rgb(66, 161, 130);
+        }
+
+        div {
+            text-align: center;
+            margin-top: 15em;
+        }
+
+        button {
+            margin: 1em;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+    <script>
+        primerNumero = document.querySelector("#primerNumero")
+        segundoNumero = document.querySelector("#segundoNumero")
+        tercerNumero = document.querySelector("#tercerNumero")
+        btn = document.querySelector("button")
+        p = document.querySelector("p")
+        btn.addEventListener("click", () => {
+            if (Number (primerNumero.value) == "9" && Number (segundoNumero.value) == "1" && Number (tercerNumero.value) == "1") {
+                p.innerHTML = "Password 1 correcto";
+            }
+            else if (primerNumero.value == 7 && segundoNumero.value == 1 && tercerNumero.value == 4) {
+                p.innerHTML = "Password 2 correcto";
+            }
+            else { p.innerHTML = "Password incorrecto";}
+        })
+    </script>
+</body>
+
+</html>

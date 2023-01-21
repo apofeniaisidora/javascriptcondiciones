@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <div>
+        <img src="amor.png" id="imgFluid" class="border">
+        <button id="btnCambiar">Cambiar</button>
+    </div>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 15vh;
+        }
+
+        img {
+            width: 70vh;
+            text-align: center;
+        }
+
+        .border {
+           border:  10px solid plum;
+        }
+
+        button {
+            margin: 1em;
+        }
+    </style>
+    
+    <script>
+        const imgFluid = document.querySelector("#imgFluid");
+        const btnCambiar = document.querySelector("#btnCambiar")
+
+        btnCambiar.addEventListener("click", () => {
+            if (imgFluid.classList.contains("border")){
+                imgFluid.classList.remove("border");
+            } else {
+                imgFluid.classList.add("border");
+            }
+
+        })
+    </script>
+</body>
+
+</html>
